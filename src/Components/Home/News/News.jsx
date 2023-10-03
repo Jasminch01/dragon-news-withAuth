@@ -3,7 +3,7 @@
 const News = () => {
     return (
         <div>
-            <p>News</p>
+            
         </div>
     );
 };
