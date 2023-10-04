@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
 import Header from "../Home/Header/Header";
 import Navbar from "../Home/Navbar/Navbar";
+import useAuth from "../../Hooks/useAuth";
 
 const Register = () => {
+  const {createUserEmailPassword}= useAuth()
+  const createUserHandler = (e)=> {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email');
+    const password = form.get('password');
+
+    createUserEmailPassword(email, password)
+    .then(res=>{
+      console.log(res)
+    })
+    .then()
+  }
   return (
     <div>
         <Header></Header>
@@ -15,7 +29,7 @@ const Register = () => {
             </p>
           </div>
           <div className="flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={createUserHandler} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Full Name</span>

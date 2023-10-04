@@ -4,6 +4,7 @@ import Home from "../Components/Home/Home";
 import PostDetails from "../Components/PostDetails/PostDetails";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Register/Register";
+import PrivetRoute from "./PrivetRoute";
 
 const Routes = createBrowserRouter([
     {
@@ -17,15 +18,15 @@ const Routes = createBrowserRouter([
             },
             {
                 path : '/about',
-                element : <div>About</div>
+                element : <div>About comming Soon</div>
             },
             {
                 path : '/carrier',
-                element : <div>Carrier</div>
+                element : <div>Carrier comming Soons</div>
             },
             {
                 path : '/postDetails/:id',
-                element : <PostDetails></PostDetails>,
+                element : <PrivetRoute><PostDetails></PostDetails></PrivetRoute>,
                 loader : ()=> fetch('news.json')
             },
             {
