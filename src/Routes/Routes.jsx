@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Components/Home/Home";
+import PostDetails from "../Components/PostDetails/PostDetails";
 
 const Routes = createBrowserRouter([
     {
@@ -19,6 +20,11 @@ const Routes = createBrowserRouter([
             {
                 path : '/carrier',
                 element : <div>Carrier</div>
+            },
+            {
+                path : '/postDetails/:id',
+                element : <PostDetails></PostDetails>,
+                loader : ()=> fetch('news.json')
             }
         ]
     }

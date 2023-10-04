@@ -16,9 +16,7 @@ const Header = () => {
         </div>
         <div>
             <Marquee>
-                <p>Match Highlights: Germany vs Spain — as it happened  |  </p>
-                <p>Match Highlights: Germany vs Spain — as it happened  |  </p>
-                <p>Match Highlights: Germany vs Spain — as it happened  |  </p>
+                <p>Match Highlights: Germany vs Spain — as it happened <span>| Match Highlights: Portugal vs argentina — as it happened  | </span> </p>
             </Marquee>
         </div>
       </div>
