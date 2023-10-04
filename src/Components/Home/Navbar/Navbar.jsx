@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import defaultProfile from "../../../assets/user.png";
 
@@ -53,7 +53,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <img src={defaultProfile} alt="" className="w-12" />
-          <a className="p-2 bg-black text-white ms-3">Log in</a>
+
+          <a  className="p-2 bg-black text-white ms-3 cursor-pointer"> <Link to= '/login'>Log in</Link> </a>
         </div>
       </div>
     </div>
